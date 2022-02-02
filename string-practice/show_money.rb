@@ -16,13 +16,14 @@
 def show_me_the_money(string)
   index = 0
   while index < string.length
-    if string[index] === "$"
+    if string[index] == "$"
       return true
-    else return false
     end
     index += 1
   end
+  return false
 end
 
 
-p show_me_the_money("i hate $ but i love money")
+p show_me_the_money("i hate  but i love money")
+                            
