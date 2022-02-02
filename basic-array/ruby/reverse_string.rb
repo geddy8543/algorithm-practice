@@ -5,6 +5,7 @@
 
 # 1. Write a function that inputs a string
 # 2. Start at the end of the string
+# 2b. Need a while loop to iterate through the string backwards 
 # 3. Output the string letters or values in reverse order
 
 def reverse(string)
