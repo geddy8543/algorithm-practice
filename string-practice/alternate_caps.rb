@@ -10,12 +10,12 @@
 
 
 def alternate_caps(string)
-    index = 1
-    while index < string.length
-        string[index] = string[index].upcase
-        index += 2
-    end
-    return string
+  index = 1
+  while index < string.length
+    string[index] = string[index].upcase
+    index += 2
+  end
+  return string
     
 end
 
