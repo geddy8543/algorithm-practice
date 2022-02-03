@@ -9,18 +9,35 @@
 # 4. Keep itetrating through the entire string until you reach the end. Put any duplicate values into the new string
 # 5. Output the new string
 
+# def first_duplicate(string)
+#   index = 0
+#   duplicate = ""
+#   while index < string.length
+#     if string[index] == string[index + 1] && !duplicate.include?(string[index])
+#       duplicate << string[index]
+#     end
+#     index += 1
+#   end
+#   return duplicate
+# end
+
+# p first_duplicate("abcdefghhijkkloooooop")
+
+## This outputs each duplicate once
+
+## As the problem is written: (will just output the )
+
 def first_duplicate(string)
   index = 0
   duplicate = ""
-    while index < string.length
+  while index < string.length
     if string[index] == string[index + 1] 
       duplicate << string[index]
+      break
     end
     index += 1
-    end
-    return duplicate
+  end
+  return duplicate
 end
 
 p first_duplicate("abcdefghhijkkloooooop")
-
-## This works, but how do I get it to print each duplicate only once?
