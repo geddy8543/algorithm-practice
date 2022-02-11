@@ -22,7 +22,7 @@
 
 # p palindrome("baloney")
 
-### Without the reverse method ###
+### Without the reverse method (recursive method) ###
 def palindrome?(string)
   if string.length == 1 || string.length == 0
     true
