@@ -15,15 +15,14 @@
 # menu = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
 
 def order(array)
-    menu = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
-    index = 0
-    total = 0
-    while index < array.length
-        total += menu[array[index]] # menu["hamburger"]
-    
-        index +=1
-    end
-    return total
+  menu = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
+  index = 0
+  total = 0
+  while index < array.length
+    total += menu[array[index]] # menu["hamburger"]
+    index +=1
+  end
+  return total
 end
 
 p order(["hamburger", "fries", "soda"])
