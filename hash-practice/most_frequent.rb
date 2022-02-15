@@ -11,27 +11,23 @@
 # 5. Return the most commonly occuring letter
 
 def most_frequent(string)
-  no_space_string = string.delete(" ")
+  new_string = string.delete(" ")
   index = 0
   letter_hash = {}
-  most_frequent_letter = ""
-  most_frequent_ count = 0
-  while index < no_space_string.length
-    if !letter_hash[no_space_string[index]]
-      letter_hash[no_space_string[index]] = 1
+  
+  while index < new_string.length
+    if !letter_hash[new_string[index]]
+      letter_hash[new_string[index]] = 1
     else
-      letter_hash[no_space_string[index]] += 1 
+      letter_hash[new_string[index]] += 1 
     end
-    if letter_hash[no_space_string[index]] > most_frequent_count
-      most_frequent_count = letter_hash[no_space_string[index]]
-      most_frequent_letter = no_space_string[index]
-    end
+    
 
     index += 1
 
   end
-  return most_frequent_letter
+  return letter_hash.max_by{|_k,v| v}[0]
 end
 
-p most_frequent("peter piper picked")
+p most_frequent("peter piper picked a peck of pickled peppers")
 

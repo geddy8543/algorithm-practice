@@ -8,11 +8,22 @@
 
 # 1. define a menu with a hash that includes all of your key-value pairings
 # 2. Write a function that allows a user to place an order (they would input an array) User would input menu items
-# 3. 
+# 3. Input: ["hamburger", "fries", "soda"]
+# 4. Output: 6
 
 
-menu = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
+# menu = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
 
 def order(array)
+    menu = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
+    index = 0
+    total = 0
+    while index < array.length
+        total += menu[array[index]] # menu["hamburger"]
     
+        index +=1
+    end
+    return total
 end
+
+p order(["hamburger", "fries", "soda"])
