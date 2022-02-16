@@ -13,15 +13,25 @@
 # 3. Output the result 
 
 def fibonacci(n)
-  if n == 1
-    1
-  elsif n == 2
-    1
-  else
-    fibonacci(n-1) + fibonacci(n-2)
+  fib_array = [0, 1]
+  if n == 0
+    return n
   end
+  if n == 1
+    return n
+  end
+  index = 1
+  while index < n
+    sum = fib_array[index] + fib_array[index -1]
+    fib_array << sum
+    index += 1
+  end
+
+  return fib_array[n-1] #will return the 5th element in the sequence
+
+  
 end
 
-p fibonacci(3)
+p fibonacci(1)
 
-# This program does not work starting at 0 it only works from 1
+
