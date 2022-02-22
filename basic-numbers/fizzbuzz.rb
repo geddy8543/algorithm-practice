@@ -12,19 +12,25 @@
 # 5. If both fizz and buzz then return FizzBuzz, otherwise return each separately (use if and elsif statements)
 # 6. Edge cases? This does not work for negative integers! How to make it work with negatives? 
 
+
+
+## Using .each do
+
 def fizz_buzz(n)
-  (1..n).map do |num|
-    fizz = (num % 3 == 0)
-    buzz = (num % 5 == 0)
+  (1..n).each do |i|
+    fizz = (i % 3 == 0)
+    buzz = (i % 5 == 0)
     if fizz && buzz
-      "FizzBuzz"
-      elsif fizz
-        "Fizz"
-      elsif buzz
-        "Buzz"
-        else num
+      puts "FizzBuzz"  ## it works if you do puts but not if you do return, why?
+    elsif fizz
+      puts "Fizz"
+    elsif buzz
+      puts "Buzz"
+    else 
+      puts i
     end
   end
 end
 
-p fizz_buzz(15)
+p fizz_buzz(100)         ## This works but also prints 1..100?
+
