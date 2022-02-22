@@ -16,21 +16,35 @@
 
 ## Using .each do
 
-def fizz_buzz(n)
-  (1..n).each do |i|
-    fizz = (i % 3 == 0)
-    buzz = (i % 5 == 0)
-    if fizz && buzz
-      puts "FizzBuzz"  ## it works if you do puts but not if you do return, why?
-    elsif fizz
-      puts "Fizz"
-    elsif buzz
-      puts "Buzz"
-    else 
-      puts i
-    end
+# def fizz_buzz(n)
+#   (1..n).each do |i|
+#     fizz = (i % 3 == 0)
+#     buzz = (i % 5 == 0)
+#     if fizz && buzz
+#       puts "FizzBuzz"  ## it works if you do puts but not if you do return, why?
+#     elsif fizz
+#       puts "Fizz"
+#     elsif buzz
+#       puts "Buzz"
+#     else 
+#       puts i
+#     end
+#   end
+# end
+
+# p fizz_buzz(100)         ## This works but also prints 1..100?
+
+
+## Refactored fizzbuzz using string DOES NOT WORK!
+
+# def fizz_buzz(n)
+  1.upto(100) do |i|
+    str = ""
+    str += "Fizz" if i % 3 == 0
+    str += "Buzz" if i % 5 == 0
+    str += i if str.blank?
+    puts str
   end
-end
+# end
 
-p fizz_buzz(100)         ## This works but also prints 1..100?
-
+  # p fizz_buzz(100)

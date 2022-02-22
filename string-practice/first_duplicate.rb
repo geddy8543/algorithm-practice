@@ -25,13 +25,13 @@
 
 ## This outputs each duplicate once
 
-## As the problem is written: (will just output the )
+## As the problem is written: (will just output the first duplicate value)
 
 def first_duplicate(string)
   index = 0
   duplicate = ""
   while index < string.length
-    if string[index] == string[index + 1] 
+    if string[index] == string[index + 1]  
       duplicate << string[index]
       break
     end
