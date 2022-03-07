@@ -8,9 +8,8 @@ def fizz_buzz(n)
       "Fizz"
     elsif buzz
       "Buzz"
-      else num
-    end
+    else num     end
   end
 end
 
-p fizz_buzz(12)
+p fizz_buzz(12) ##answer will be in an array
